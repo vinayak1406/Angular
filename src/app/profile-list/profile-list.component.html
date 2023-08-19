@@ -1,0 +1,6 @@
+<div *ngFor="let profile of profiles">
+  <h3>{{ profile.name }}</h3>
+  <p>{{ profile.description }}</p>
+  <button (click)="showOnMap(profile.address)">Summary</button>
+</div>
+<app-map-display [selectedAddress]="selectedAddress"></app-map-display>
